@@ -1,6 +1,8 @@
 jQuery(function() {
 	if ($(".photo-desktop").is(":visible") && !($(".photo-mobile").is(":visible"))) {
-		console.log("asdasda");
+		while ($(".photo-desktop").width() < 1) {
+			console.log("waiting for image to load");
+		}
 
 		$(".brief").width($(".photo-desktop").width());
 		$(".words-and-letters").width($(".photo-desktop").width());
