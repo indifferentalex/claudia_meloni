@@ -1,15 +1,11 @@
 jQuery(function() {
-	$(".photo-desktop").one("load", function() {
+	if ($(".photo-desktop").is(":visible") && !($(".photo-mobile").is(":visible"))) {
+		console.log("asdasda");
 
-	}).each(function() {
-		if (this.complete) {
-			if ($(".photo-desktop").is(":visible") && !($(".photo-mobile").is(":visible"))) {
-				$(".brief").width($(".photo-desktop").width());
-				$(".words-and-letters").width($(".photo-desktop").width());
-				$(".posts").css({ "margin-left": $(".photo-desktop").width() });
-			}			
-		}
-	});
+		$(".brief").width($(".photo-desktop").width());
+		$(".words-and-letters").width($(".photo-desktop").width());
+		$(".posts").css({ "margin-left": $(".photo-desktop").width() });
+	}			
 
 	$(".words-and-letters").transition({ opacity: 1, duration: 1500, delay: 500 });
 
