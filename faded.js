@@ -1,5 +1,5 @@
 jQuery(function() {
-	if ($(".photo-desktop").is(":visible")) {
+	if ($(".photo-desktop").is(":visible") && !($(".photo-mobile").is(":visible"))) {
 		$(".brief").width($(".photo-desktop").width());
 		$(".words-and-letters").width($(".photo-desktop").width());
 		$(".posts").css({ "margin-left": $(".photo-desktop").width() });
