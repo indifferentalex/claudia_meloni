@@ -1,0 +1,192 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	overflow-x: hidden;
+}
+
+.brief {
+	z-index: 3;
+	position: relative;
+	float: left;
+	height: 100%;
+	/*width: auto;*/
+}
+
+.photo {
+	height: 100%;
+	/*position: relative;*/
+}
+
+.photo-mobile {
+	position: fixed;
+	display: none;
+}
+
+.photo-desktop {
+	position: fixed;
+	height: 100%;
+}
+
+.words-and-letters {
+	position: fixed;
+	top: 55%;
+	/*height: 100%;*/
+	width: 100%;
+	text-align: center;
+}
+
+.words-and-letters h1 {
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+	font-size: 3em;
+	margin-bottom: 0px;
+	color: #faf3ff;
+}
+
+.words-and-letters h5 {
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin-top: 0px;
+	font-weight: 500;
+	font-size: 0.83em;
+	color: #e5deea;
+}
+
+.words-and-letters p {
+	padding: 0px 27px;
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.8em;
+	color: #fff;
+}
+
+.words-and-letters a {
+	color: #5599ff;
+	text-decoration: none;
+}
+
+.posts {
+	background-color: #fff;
+	position: absolute;
+	z-index: 7;
+	padding-top: 10%;
+}
+
+.post {
+	position: relative;
+	padding-left: 16%;
+	width: 65%;
+	margin: 0px auto;
+	margin-bottom: 10%;
+
+	opacity: 0;
+}
+
+.post img.desktop-image {
+	position: absolute;
+	left: 0px;
+	width: 15%;
+}
+
+.post img.mobile-image {
+	display: none;
+}
+
+.post .mobile-image-container {
+	width: 100%;
+	text-align: center;
+}
+
+.post h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	margin: 0px;
+	color: #2b2f3c;
+}
+
+.post h5 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.83em;
+	margin-bottom: 18px;
+	color: #2b2f3c;
+}
+
+.post p {
+	font-family: 'Merriweather', serif;
+	font-size: 1em;
+	line-height: 1.8em;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	color: #3f465c;
+}
+
+.post h5.continue-reading {
+	cursor: pointer;
+	margin-top: 0px;
+	font-weight: 300;
+	color: #5599ff;
+}
+
+@media only screen 
+  and (max-device-width: 736px) {
+  .brief {
+  	float: none;
+  }
+
+	.photo-mobile {
+		display: inline;
+		height: auto;
+		width: 100%;
+		/*position: relative;*/
+	}
+
+	.photo-desktop {
+		display: none;
+	}
+
+	.words-and-letters {
+		/*position: absolute;*/
+		top: 52%;
+	}
+
+	.words-and-letters h1 {
+		font-size: 6.5em;
+	}
+
+	.words-and-letters h5 {
+		font-size: 1.66em;
+	}
+
+	.words-and-letters p {
+		line-height: 2.1em;
+		font-size: 2em;
+	}
+
+	.post {
+		padding-left: 0px;
+	}
+
+	.post img.desktop-image {
+		display: none;
+	}
+
+	.post img.mobile-image {
+		display: inline;
+	}
+
+	.post h2 {
+		font-size: 3em;
+	}
+
+	.post h5 {
+		font-size: 1.66em;
+	}
+
+	.post p {
+		font-size: 2em;
+		line-height: 2.1em
+	}	
+}
