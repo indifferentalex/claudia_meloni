@@ -1,12 +1,15 @@
 jQuery(function() {
-	setTimeout(
-		function() {
+	$(".photo-desktop").one("load", function() {
+
+	}).each(function() {
+		if (this.complete) {
 			if ($(".photo-desktop").is(":visible") && !($(".photo-mobile").is(":visible"))) {
 				$(".brief").width($(".photo-desktop").width());
 				$(".words-and-letters").width($(".photo-desktop").width());
 				$(".posts").css({ "margin-left": $(".photo-desktop").width() });
-			}
-		}, 50);
+			}			
+		}
+	});
 
 	$(".words-and-letters").transition({ opacity: 1, duration: 1500, delay: 500 });
 
