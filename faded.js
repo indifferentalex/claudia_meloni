@@ -1,9 +1,11 @@
 jQuery(function() {
 	if ($(".photo-desktop").is(":visible") && !($(".photo-mobile").is(":visible"))) {
-		while ($(".photo-desktop").width() < 1) {
-			console.log("waiting for image to load");
-		}
-
+		$(".photo-desktop").load(function() {
+			$(".brief").width($(".photo-desktop").width());
+			$(".words-and-letters").width($(".photo-desktop").width());
+			$(".posts").css({ "margin-left": $(".photo-desktop").width() });
+		});
+		
 		$(".brief").width($(".photo-desktop").width());
 		$(".words-and-letters").width($(".photo-desktop").width());
 		$(".posts").css({ "margin-left": $(".photo-desktop").width() });
